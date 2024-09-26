@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Product Management</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+    {% load static %}
+    <script src="{% static 'fun.js' %}" type="text/javascript"></script>
+
+    {% load static %}
+    <script src="{% static 'validation.js' %}" type="text/javascript"></script>
+
+    {% load static %}
+    <script src="{% static 'captcha.js' %}" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+</head>
+
+<body onload="generate();">
+    <div style="display: flex;">
+
+
+        <div style="padding-left: 900px;
+    padding-top: 50px;
+    display: flex;">
+            <div style="padding-right: 20px;">
+                <a style="text-decoration:none;font-size: 30px;" href="adminprofile"> Admin </a>
+            </div>
+
+
+            <div style="padding-right: 20px;">
+
+                <a style="text-decoration:none;font-size: 30px;color: black;" href="addproduct">Add Product</a>
+            </div>
+            <div style="padding-right: 20px;">
+                <a style="text-decoration:none;font-size: 30px;" href="adminhistory"> Sell History </a>
+            </div>
+
+
+
+            <div style="padding-right: 20px;">
+                <a style="text-decoration:none;font-size: 30px;" href="/">Logout</a>
+            </div>
+        </div>
+
+
+        <!-- this is middle content -->
+<center>
+        <div
+            style="position: absolute;right:600px;top:100px;border: 3px solid purple;padding: 40px;border-radius: 20px;margin-top: 100px">
+            <form name="f1" action="/addproductTask" method="post" onsubmit="return validation();">
+                <table align="center" >
+                    <tr>
+                        <td style="padding:10px;color: purple;"> Product Name</td>
+                        <td><input style="margin:10px;" type="text" name="pname">
+                            <div style="color:red" id="nm"></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding:10px;color: purple;"> Product Brand </td>
+                        <td><input style="margin:10px;" type="text" name="bname">
+                            <div style="color:red" id="fnm"></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:10px;color: purple;"> Amount( Selling price ) </td>
+                        <td><input style="margin:10px;" type="text" name="am">
+                            <div style="color:red" id="mob"></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding:10px;color: purple;"> Available </td>
+                        <td><input style="margin:10px;" type="text" name="avai">
+                            <div style="color:red" id="eemail"></div>
+                        </td>
+                    </tr>
+
+                    
+
+                
+                    </tr>
+
+                    
+                    <!-- captcha -->
+                    <tr>
+
+                        <td colspan="2">
+                            <center>
+                                <div id="user-input" class="inline">
+                                    <input style="margin:10px;color: purple;" id="submit" type="text" name="cap"
+                                        placeholder="enter captcha code">
+                                </div>
+
+                                <div class="inline" onclick="generate()">
+                                    <i class="fas fa-sync"></i>
+                                </div>
+
+                                <div style="border: 2px solid purple;padding: 5px;border-radius:10px ;font-size: 20px;width: 100px;"
+                                    id="image" class="inline" selectable="False">
+                                </div>
+                                <input
+                                    style="color: white; background-color:purple;font-size: 20px;border-radius: 5px;margin-top: 5px;"
+                                    type="submit" value="confirm captcha" id="btn" onclick="printmsg()">
+                                <p id="key"></p>
+                            </center>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <center><input style="margin:10px;font-size: 30px;color: yellow;background-color: black;"
+                                    type="submit" value="Add">
+                        </td>
+                        
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+
+    </center>
+    
+
+    <!-- end middle content -->
+
+
+
+
+
+
+</body>
+
+</html>

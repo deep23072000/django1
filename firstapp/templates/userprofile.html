@@ -1,0 +1,83 @@
+<div style="display: flex;">
+    <div style="padding-left: 30px;padding-top: 50px;">
+        <a style="text-decoration:none;font-size: 30px;color: black" href="userprofile">Profile</a>
+    </div>
+
+    <div style="padding-left: 900px;
+padding-top: 50px;
+display: flex;">
+
+        <div style="padding-right: 20px;">
+            <a style="text-decoration:none;font-size: 30px;" href="productlogin">Products</a>
+        </div>
+        <div style="padding-right: 20px;">
+            <a style="text-decoration:none;font-size: 30px;" href="buy"> Buy </a>
+        </div>
+        <div style="padding-right: 20px;">
+            <a style="text-decoration:none;font-size: 30px;" href="history">History</a>
+        </div>
+        <div style="padding-right: 20px;">
+            <a style="text-decoration:none;font-size: 30px;" href="/">Logout</a>
+        </div>
+    </div>
+</div>
+<div>
+    <center>
+        <table  style="font-size:xx-large; border: 3px solid purple;border-radius: 20px;margin: 100px;padding: 60px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">
+            
+            {% for i in h %}
+
+            <tr>
+                <td style="border: 0px solid purple;border-radius: 4px;">ID Number</td>
+                <td>
+                    {{i.0}}
+                </td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>
+                    {{i.1}}
+                </td>
+            </tr>
+            <td>Father Name</td>
+                <td>
+                    {{i.2}}
+                </td>
+            </tr>
+            <td>Mobile Number &nbsp &nbsp &nbsp</td>
+                <td>
+                    {{i.3}}
+                </td>
+            </tr>
+            <td>Email</td>
+                <td>
+                    {{i.4}}
+                </td>
+            </tr>
+            <td>Password</td>
+                <td>
+                    {{i.5}}
+                </td>
+            </tr>
+            <td>Gender</td>
+                <td>
+                    {{i.6}}
+                </td>
+            </tr>
+            <!-- <td>
+                <a href='edit'>Edit</a>
+            </td> -->
+            <!-- <td>
+                <a href='deleteuser?sid={{i.0}}'>Delete</a>
+            </td> -->
+
+            </tr>
+
+
+            {% endfor %}
+
+        </table>
+
+
+    </center>
+</div>

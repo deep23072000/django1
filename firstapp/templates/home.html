@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Product Management</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    {% load static %}
+    <script src="{% static 'fun.js' %}" type="text/javascript"></script>
+
+    {% load static %}
+    <link href="{% static 'navbar.css' %}" rel="stylesheet">
+
+    {% load static %}
+    <link href="{% static 'footer.css' %}" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img alt="Logo" style="width:80px;" src="{% static 'product.png' %}"></a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li style="font-size: 30px;"><a href="" style="color:yellow;">Home</a></li>
+
+        
+        <li class="dropdown menu-small" style="font-size: 30px;">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Products <b class="caret"></b> </a>
+          <ul class="dropdown-menu megamenu row">
+            <li><a href="productshow">Products</a></li>
+            
+            </ul>
+          </li>
+        <li class="dropdown menu-small" style="font-size: 30px;">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Login<b class="caret"></b></a>
+          <ul class="dropdown-menu megamenu row">
+                <li><a href="userlogin">Login</a></li>
+                
+          </ul>
+        </li>
+        <li class="dropdown menu-small" style="font-size: 30px;">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registration<b class="caret"></b></a>
+          <ul class="dropdown-menu megamenu row">
+                <li><a href="/userreg">User</a></li>
+                
+          </ul>
+        </li>
+    </div>
+  </div>
+</div>
+
+{% load static %}
+<div>
+  <div style="position: absolute;font-size: 100px;left: 800px;">Management</div>
+    <img src="{% static "product4.png" %}" alt="My image">
+
+</div>
+<!--{% load static %}
+<img src="{% static "map.png" %}" alt="My image">-->
+{% load static%}
+<div class="foot">
+  <p ><h3 class="text-info">Follow Us:</h3><a href="#" target="_blank" class="p-4"><i class="fa fa-instagram" style="font-size:48px;"></i></a>
+    <a href="https://www.youtube.com/c/Technicalstudioengg" target="_blank" class="p-4"><i class="fa fa-youtube" style="font-size:48px;"></i></a>
+    <a href="https://www.com/facebook.com/profile.php?id=100028302953820" target="_blank" class="p-4"><i class="fa fa-facebook" style="font-size:48px;"></i></a>
+    <a href="#" target="_blank" class="p-4"><i class="fa fa-linkedin" style="font-size:48px;"></i></a>
+  </p>    
+    <p>Copyright © 2022 Technical Studio Engg. Pvt. Ltd. All rights reserved.</p>
+
+  </div>
+
+</body>
+</html>

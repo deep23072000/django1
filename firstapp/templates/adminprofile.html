@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Product Management</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+    {% load static %}
+    <script src="{% static 'fun.js' %}" type="text/javascript"></script>
+
+    {% load static %}
+    <link href="{% static 'navbar.css' %}" rel="stylesheet">
+
+
+
+    
+
+
+</head>
+
+<body>
+    
+    <div>
+        
+
+        <div style="padding-left: 900px;
+    padding-top: 50px;
+    display: flex;"><div style="padding-right: 20px;">
+                <a style="text-decoration:none;font-size: 30px;color: black;" href="adminprofile"> Admin </a>
+            </div>
+
+
+            <div style="padding-right: 20px;">
+
+                <a style="text-decoration:none;font-size: 30px;" href="addproduct">Add Product</a>
+            </div>
+            <div style="padding-right: 20px;">
+                <a style="text-decoration:none;font-size: 30px;" href="adminhistory"> Sell History </a>
+            </div>
+            
+            
+            
+            <div style="padding-right: 20px;">
+                <a style="text-decoration:none;font-size: 30px;" href="/">Logout</a>
+            </div>
+        </div>
+    </div>
+    <!-- middle content -->
+
+    <div>
+        
+        <center>
+            <table style="font-size:x-large; border: 3px solid purple;border-radius: 20px;margin: 100px;padding: 100px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; ">
+
+
+                <th>  &nbsp &nbsp &nbspRegistered User  &nbsp &nbsp &nbsp</th>
+                <th>  Available Products  &nbsp &nbsp &nbsp</th>
+                <th> Total Sell(Rs.)  &nbsp &nbsp &nbsp</th>
+                <th> Total Quantity Sell  &nbsp &nbsp &nbsp</th>
+                <th> Total Buyer  &nbsp &nbsp &nbsp</th>
+                <tr>
+                <td><center>{{rec.0.0}}</center></td>
+                <td><center>{{rec1.0.0}}</center></td>
+                <td><center>{{rec2.0.0}}</center></td>
+                <td><center>{{rec3.0.0}}</center></td>
+                <td><center>{{rec4.0.0}}</center></td>
+              
+               </tr>
+
+                                                                         
+
+               
+
+
+                
+
+            </table>
+
+
+        </center>
+    </div>
+
+
+
+    <!-- end middle content -->
+
+
+
+
+
+
+</body>
+
+</html>
