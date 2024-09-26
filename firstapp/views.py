@@ -2,8 +2,8 @@ from django.shortcuts import render,redirect
 import mysql.connector as mysql
 import datetime
 
-def home(req):
-    return render(req,'home.html')
+def index(req):
+    return render(req,'index.html')
 
 def userreg(req):
     return render(req,'userreg.html')
